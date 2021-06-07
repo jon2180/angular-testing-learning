@@ -1,0 +1,16 @@
+.form-header {
+  line-height: 1.578;
+}
+
+.form-item {
+  padding: 8px 0;
+  /*line-height: 32px;*/
+  margin-bottom: 16px;
+}
+
+.form-item input, .form-item label {
+  height: 24px;
+  color: #333333;
+  line-height: 24px;
+  outline: none;
+}

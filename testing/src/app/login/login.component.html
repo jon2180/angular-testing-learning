@@ -1,0 +1,66 @@
+<h1 class="form-header">
+  {{text}}
+</h1>
+
+<form id="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div class="form-item">
+    <label class="center-block">Name:
+      <input class="form-control" formControlName="name">
+    </label>
+  </div>
+
+  <div class="form-item">
+    <label class="center-block">Email:
+      <input class="form-control" formControlName="email">
+    </label>
+  </div>
+
+  <div class="form-item">
+    <label class="center-block">Text:
+      <input class="form-control" formControlName="text">
+    </label>
+  </div>
+
+  <div class="form-item">
+    <label class="center-block">
+      <input value="fe" name="occupation" formControlName="occupation" type="radio"> 前端开发
+    </label>
+    <label class="center-block">
+      <input value="be" name="occupation"  formControlName="occupation" type="radio" /> 后端开发
+    </label>
+  </div>
+
+  <div class="form-item">
+    <label class="center-block">
+      <input value="basketball" name="habits"  formControlName="habits" type="checkbox"> 篮球
+    </label>
+
+    <label class="center-block">
+      <input value="table_tennis" name="habits"  formControlName="habits" type="checkbox" /> 乒乓球
+    </label>
+
+    <label class="center-block">
+      <input value="badminton" name="habits"  formControlName="habits" type="checkbox" /> 羽毛球
+    </label>
+
+    <label class="center-block">
+      <input value="running" name="habits"   formControlName="habits" type="checkbox" /> 跑步
+    </label>
+
+    <label class="center-block">
+      <input value="sanda" name="habits"  formControlName="habits" type="checkbox" /> 散打
+    </label>
+
+    <label class="center-block">
+      <input value="kick_boxing" name="habits"  formControlName="habits" type="checkbox" /> 自由搏击
+    </label>
+  </div>
+
+  <div class="form-item">
+    <button
+      type="submit"
+      [disabled]="!contactForm.valid"
+      class="btn btn-success">Save
+    </button>
+  </div>
+</form>
